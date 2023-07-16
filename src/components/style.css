@@ -1,0 +1,14 @@
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  
+}
+
+.card{
+width: 25%;
+border: solid 1px white;
+margin: 10px;
+}
