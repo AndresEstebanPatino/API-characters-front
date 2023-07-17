@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const url = 'http://localhost:8080/characters'
+const url = 'http://localhost:8081/characters'
 
 const CreateCharacter = () => {
     
@@ -13,7 +13,11 @@ const CreateCharacter = () => {
 
     const store = async (e) => {
         e.preventDefault();
-        await axios.post(url, {name: nombre, img: imagen, description : descripcion})
+        await axios.post(url, { //el método post es para enviar datos a la bae de datos
+            name: nombre, 
+            img: imagen, 
+            description : descripcion
+        })
         navigate("/")
     }   
 
